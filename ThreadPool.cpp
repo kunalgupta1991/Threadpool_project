@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <iostream>
 #include<mutex>
 #include<vector>
@@ -62,20 +63,23 @@ public:
 	}
 
 };
-void fun1()
-{
-	while (1)
-	{
-		cout << this_thread::get_id() << " executing taks "<<endl;
-		this_thread::sleep_for(chrono::milliseconds(100));
-	}
-}
-int main()
-{
-		ThreadPool t(4);
-		t.trypost(fun1);
-		t.trypost(fun1);
-		t.trypost(fun1);
-		t.trypost(fun1);
-	
-}
+//void fun1()
+//{
+//	while (1)
+//	{
+//		cout << this_thread::get_id() << " executing taks "<<endl;
+//		this_thread::sleep_for(chrono::milliseconds(100));
+//	}
+//}
+//int main()
+//{
+//	//{
+//	//	ThreadPool t(4);
+//	//	t.trypost(fun1);
+//	//	t.trypost(fun1);
+//	//	t.trypost(fun1);
+//	//	t.trypost(fun1);
+//	//}
+//
+//
+//}
